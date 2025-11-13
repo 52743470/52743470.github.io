@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reprogramming Education</title>
+<style>
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    overflow: hidden;
+    background: linear-gradient(135deg, #eaf4f4, #f5f9eb);
+  }
+
+  .slide {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: opacity 0.6s ease-in-out;
+  }
+
+  .slide.active {
+    display: block;
+    opacity: 1;
+  }
+
+  .slide.scrollable {
+    overflow-y: auto;
+  }
+
+  h1, h2 {
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: #2e7d32;
+  }
+
+  h1.title {
+    font-size: 3em;
+    color: #1b5e20;
+    text-decoration: none;
+  }
+
+  .content {
+    max-width: 1000px;
+    margin: 20px auto;
+    font-size: 1.1em;
+    line-height: 1.6;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  pre {
+    background-color: #f4f4f4;
+    color: #2e7d32;
+    text-align: left;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: "Courier New", monospace;
+  }
+
+  .quote {
+    font-style: italic;
+    color: #388e3c;
+    margin-top: 15px;
+  }
+
+  img.slide-img {
+    max-width: 45%;
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+  .nav-arrow {
+    position: fixed;
+    top: 50%;
+    font-size: 2em;
+    background: rgba(46, 125, 50, 0.7);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+    z-index: 10;
+  }
+
+  .nav-arrow:hover {
+    background: rgba(27, 94, 32, 0.9);
+  }
+
+  #prevBtn { left: 20px; }
+  #nextBtn { right: 20px; }
+
+  .reflection {
+    display: none;
+    background: #e8f5e9;
+    border-left: 4px solid #2e7d32;
+    padding: 15px;
+    margin-top: 10px;
+    color: #2e7d32;
+    text-align: left;
+  }
+
+  .function {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 8px;
+    font-family: inherit;
+  }
+
+  .function:hover {
+    background-color: #1b5e20;
+  }
+
+  footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #666;
+  }
+
+  .cover-footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.95em;
+    color: #1b5e20;
+  }
+</style>
+</head>
+
+<body>
+
+  <!-- Slide 1 -->
+  <div class="slide active" style="background: url('coverpage_background.jpg') center/cover no-repeat;">
+    <h1 class="title">Reprogramming Education</h1>
+    <h2>A message for the Believe Museum</h2>
+    <p class="quote">“If learning = code, then care = logic.”</p>
+    <div class="content">
+      <p><strong>By:</strong> Ayesha Sayed Ally<br><strong>Student Number:</strong> 52743470</p>
+      <p><strong>Topics:</strong> Chapter 6 – School Decline | Chapter 7 – Gender and Education | Ethic of Care (Noddings)</p>
+      <h2>Introduction</h2>
+      <p>This interactive presentation, Reprogramming Education, explores how classrooms can be transformed through care and empathy. It highlights the challenges learners face in traditional education and shows how teachers can create supportive, engaging and human-centered learning environments. Using code-like metaphors and visuals, the presentation emphasizes that education is not just about knowledge but about nurturing and motivating learners to thrive.</p>
+    </div>
+    <div class="cover-footer">
+      On Keyboard: Right Arrow → to go next | Left Arrow ← to go previous
+	  <p>&copy Ayesha Ally 52743470</p>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide scrollable">
+    <h1>Current Education System</h1>
+    <div class="content">
+      <img src="slide2_classroom.jpg" class="slide-img">
+      <img src="slide2_stressed_student.jpg" class="slide-img">
+      <pre>
+for learner in classroom:
+    if grades < 50:
+        system.fail(learner)
+    else:
+        system.pass(learner)
+      </pre>
+      <p>This code represents a traditional, rigid system: students are treated as outputs, not individuals. Learning is evaluated solely on performance metrics.</p>
+      <pre>
+# Explanation:
+# - system.fail(learner) punishes students without addressing their learning gaps.
+# - system.pass(learner) rewards compliance rather than curiosity or understanding.
+# - No adaptation to learner differences.
+      </pre>
+      <button class="function" onclick="toggleReflection('r1')">▶ Reflection</button>
+      <div id="r1" class="reflection">
+        <p>This slide highlights the ethical shortcomings of a purely results-oriented system. Learners become disengaged when relational and emotional needs are ignored. (Geduld & Jagals, 2021; Noddings, 2012)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="slide scrollable">
+    <h1>System Crash Detected</h1>
+    <div class="content">
+      <img src="slide3_dropout.jpg" class="slide-img">
+      <pre>
+if care == None:
+    motivation -= 100
+    dropout_rate += 50
+    learning_outcomes = 0
+      </pre>
+      <p>Without care, learners disengage, resulting in decreased motivation, higher dropout rates and zero meaningful learning outcomes.</p>
+      <pre>
+# Explanation:
+# - motivation decreases sharply when emotional support is absent.
+# - dropout_rate increases due to alienation.
+# - learning_outcomes reflect not just grades but holistic development.
+      </pre>
+      <button class="function" onclick="toggleReflection('r2')">▶ Reflection</button>
+      <div id="r2" class="reflection">
+        <p>This reflects how a lack of care in classrooms causes systemic breakdown. Emotional and relational neglect leads to disengagement. (Higgs & Smith, 2012)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="slide scrollable">
+    <h1>Introducing Noddings.care()</h1>
+    <div class="content">
+      <img src="slide4_teacher_listening.jpg" class="slide-img">
+      <img src="slide4_student_smiling.jpg" class="slide-img">
+      <pre>
+def care(teacher, learner):
+    teacher.listen(learner.voice)
+    teacher.ask_questions()
+    teacher.respond_with_empathy()
+    teacher.adjust_pace()
+    return relationship.built()
+      </pre>
+      <p>This function implements Nel Noddings’ <strong>Ethic of Care</strong>, showing teaching as relational and responsive rather than procedural.</p>
+      <pre>
+# Explanation:
+# - teacher.listen(learner.voice) acknowledges student perspectives.
+# - teacher.ask_questions() promotes dialogue and understanding.
+# - teacher.respond_with_empathy() prioritizes emotional intelligence.
+# - teacher.adjust_pace() adapts instruction for inclusivity.
+# - relationship.built() returns the core outcome of human-centered teaching.
+      </pre>
+      <button class="function" onclick="toggleReflection('r3')">▶ Reflection</button>
+      <div id="r3" class="reflection">
+        <p>Care is active and relational. Teachers are ethically bound to nurture individuality and foster meaningful connections. (Noddings, 2012)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 5 -->
+  <div class="slide scrollable">
+    <h1>System Update: Education 2.0</h1>
+    <div class="content">
+      <img src="slide5_happy_learning.jpg" class="slide-img">
+      <img src="slide5_hands_on.jpg" class="slide-img">
+      <pre>
+for learner in classroom:
+    if learner.needs:
+        teacher.adapt(lesson)
+    learning = joy + curiosity + empathy
+    learner.growth += learning
+      </pre>
+      <p>Education 2.0 integrates care directly into the operating system of learning. Joy, curiosity and empathy become measurable aspects of growth.</p>
+      <pre>
+# Explanation:
+# - teacher.adapt(lesson) personalizes learning.
+# - joy + curiosity + empathy quantifies a holistic approach.
+# - learner.growth accumulates skills, confidence, and relational intelligence.
+      </pre>
+      <button class="function" onclick="toggleReflection('r4')">▶ Reflection</button>
+      <div id="r4" class="reflection">
+        <p>Transformative education emerges when emotional, cognitive and ethical dimensions are integrated. Learners thrive in environments emphasizing care. (Darling-Hammond, 2017)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 6 -->
+  <div class="slide scrollable">
+    <h1>Local Variables: South African Education</h1>
+    <div class="content">
+      <img src="slide6_community.jpg" class="slide-img">
+      <img src="slide6_limited_resources.jpg" class="slide-img">
+      <pre>
+if resources == scarce:
+    share_knowledge()
+    empower_community()
+    adapt_lessons(available_materials)
+      </pre>
+      <p>Even in resource-limited settings, care-driven teaching adapts materials, shares knowledge and strengthens communities.</p>
+      <pre>
+# Explanation:
+# - share_knowledge() spreads learning beyond classrooms.
+# - empower_community() builds collective responsibility.
+# - adapt_lessons(available_materials) models creative problem-solving.
+      </pre>
+      <button class="function" onclick="toggleReflection('r5')">▶ Reflection</button>
+      <div id="r5" class="reflection">
+        <p>Ubuntu philosophy aligns with care ethics: learning is relational and communal. Material scarcity is mitigated by collaborative knowledge-building. (Soudien, 2012)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 7 -->
+  <div class="slide scrollable">
+    <h1>Output: A Caring Classroom</h1>
+    <div class="content">
+      <img src="slide7_collaboration.jpg" class="slide-img">
+      <img src="slide7_groupwork.jpg" class="slide-img">
+      <pre>
+while learning:
+    care = true
+    collaboration = encourage()
+    feedback = continuous()
+    community = stronger()
+      </pre>
+      <p>In care-centered classrooms, continuous feedback and collaboration create stronger, resilient learning communities.</p>
+      <pre>
+# Explanation:
+# - care = true maintains an ongoing relational focus.
+# - collaboration = encourage() promotes peer support.
+# - feedback = continuous() nurtures growth mindsets.
+# - community = stronger() reflects sustainable relational learning.
+      </pre>
+      <button class="function" onclick="toggleReflection('r6')">▶ Reflection</button>
+      <div id="r6" class="reflection">
+        <p>A caring classroom fosters inclusion, engagement and co-created knowledge. It strengthens relational pedagogy and sustainable learning practices. (Hargreaves & Fullan, 2012)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 8 -->
+  <div class="slide scrollable">
+    <h1>Final Commit</h1>
+    <div class="content">
+      <img src="slide8_future_ready.jpg" class="slide-img">
+      <pre>
+commit("Education with Heart")
+print("Future compiled successfully.")
+backup("empathy_module")
+update_system(care + ethics + creativity)
+      </pre>
+      <p>This final slide emphasizes that education must evolve morally, not just procedurally, embedding empathy, ethics and creativity into its foundation.</p>
+      <pre>
+# Explanation:
+# - commit() symbolizes ethical commitment to learners.
+# - print() confirms successful integration of moral values.
+# - backup("empathy_module") preserves relational knowledge.
+# - update_system() ensures care is central to ongoing development.
+      </pre>
+      <button class="function" onclick="toggleReflection('r7')">▶ Reflection</button>
+      <div id="r7" class="reflection">
+        <p>Education with heart transforms learners and communities. This encourages educators to continuously integrate care, empathy and ethics into their practice. (Noddings, 2012)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 9 -->
+  <div class="slide scrollable">
+    <h1>References</h1>
+    <div class="content" style="text-align:left;">
+      <ul>
+        <li>Darling-Hammond, L., 2017. <em>Empowered Educators: How High-Performing Systems Shape Teaching Quality Around the World</em>. San Francisco: Jossey-Bass.</li>
+		<li>Geduld, B. & Jagals, D. (Eds.), 2021. <em>Societal Issues in the Curriculum</em>. Cape Town: Oxford University Press.</li>
+		<li>Hargreaves, A. & Fullan, M., 2012. <em>Professional Capital: Transforming Teaching in Every School</em>. New York: Teachers College Press.</li>
+		<li>Higgs, L. & Smith, J., 2012. <em>Ethics in Education</em>. Pretoria: Van Schaik.</li>
+		<li>Joorst, J.P., 2021. <em>Why should an ethics of care matter in education?</em> Transformation in Higher Education, 6, a127. [online] Available at: <a href="https://doi.org/10.4102/the.v6i0.127">https://doi.org/10.4102/the.v6i0.127</a> Date of access 13 Nov. 2025.</li>
+		<li>Noddings, N., 2012. <em>Education and Democracy in the 21st Century</em>. New York: Teachers College Press.</li>
+		<li>South, B.C., Gachago, D. & Belford, C., 2018. <em>To care or not to care – reflections on the ethics of blended learning in times of disruption</em>. South African Journal of Higher Education, 32(6), pp.49‑64. [online] Available at: <a href="https://doi.org/10.20853/32-6-2659">https://doi.org/10.20853/32-6-2659</a> Date of access 13 Nov. 2025.</li>
+		<li>Soudien, C., 2012. <em>Realising the Dream: Education, Equality and Policy in South Africa</em>. Cape Town: HSRC Press.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Navigation Arrows -->
+  <button id="prevBtn" class="nav-arrow">&#8592;</button>
+  <button id="nextBtn" class="nav-arrow">&#8594;</button>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (index + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }
+
+  document.getElementById('nextBtn').addEventListener('click', () => showSlide(currentSlide + 1));
+  document.getElementById('prevBtn').addEventListener('click', () => showSlide(currentSlide - 1));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') showSlide(currentSlide + 1);
+    if (e.key === 'ArrowLeft') showSlide(currentSlide - 1);
+  });
+
+  function toggleReflection(id) {
+    const box = document.getElementById(id);
+    if (box.style.display === 'block') {
+      box.style.display = 'none';
+    } else {
+      box.style.display = 'block';
+      slides[currentSlide].scrollTop = 0;
+    }
+  }
+</script>
+
+</body>
+</html>
